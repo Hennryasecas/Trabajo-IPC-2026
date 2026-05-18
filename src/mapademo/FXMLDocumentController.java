@@ -4,7 +4,7 @@
  *  Asignatura: Interfaces Persona-Computador
  *  Universitat Politècnica de València
  * ============================================================
- *
+ *hoala
  *  DESCRIPCIÓN GENERAL
  *  -------------------
  *  Este controlador gestiona la vista principal de la aplicación
