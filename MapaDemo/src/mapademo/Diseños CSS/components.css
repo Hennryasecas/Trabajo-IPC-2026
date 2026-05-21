@@ -1,0 +1,203 @@
+/* ============================================================
+   components.css — Running la Safor · JavaFX Misc Components
+   Tags, Charts, ListViews, Badges, ProgressBar
+   ============================================================ */
+
+/* ── Etiqueta de estado "Completada" (verde) ── */
+.badge-completed {
+    -fx-background-color: #D6F5E5;
+    -fx-text-fill: #1E8A4A;
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-padding: 2px 10px;
+}
+
+/* ── Etiqueta de estado "En progreso" (azul) ── */
+.badge-active {
+    -fx-background-color: #D6EFFF;
+    -fx-text-fill: #006EAF;
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-padding: 2px 10px;
+}
+
+/* ── Etiqueta de error / eliminado (roja) ── */
+.badge-error {
+    -fx-background-color: #FFE5E0;
+    -fx-text-fill: #C0392B;
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-padding: 2px 10px;
+}
+
+/* ── ListView de actividades ── */
+.list-view-activities {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 6px 0;
+}
+
+.list-view-activities .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 4px 10px;
+}
+
+.list-view-activities .list-cell:selected {
+    -fx-background-color: #EAF7FD;
+    -fx-background-radius: 8px;
+}
+
+.list-view-activities .list-cell:hover:!selected {
+    -fx-background-color: #F5FAFD;
+    -fx-background-radius: 8px;
+}
+
+/* ── Barra de progreso (carga de GPX) ── */
+.progress-bar-gpx {
+    -fx-accent: #00AEEF;
+    -fx-background-color: #E0F0FA;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-min-height: 6px;
+    -fx-max-height: 6px;
+}
+
+.progress-bar-gpx .bar {
+    -fx-background-color: linear-gradient(to right, #1EC6F5, #00AEEF);
+    -fx-background-radius: 6px;
+    -fx-background-insets: 0;
+}
+
+.progress-bar-gpx .track {
+    -fx-background-color: #E0F0FA;
+    -fx-background-radius: 6px;
+    -fx-background-insets: 0;
+}
+
+/* ── Gráfica de altitud (LineChart) ── */
+.altitude-chart {
+    -fx-background-color: transparent;
+    -fx-padding: 4px 8px;
+}
+
+.altitude-chart .chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.altitude-chart .chart-series-line {
+    -fx-stroke: #00AEEF;
+    -fx-stroke-width: 2px;
+}
+
+.altitude-chart .default-color0.chart-series-line {
+    -fx-stroke: #00AEEF;
+}
+
+.altitude-chart .default-color1.chart-series-line {
+    -fx-stroke: #2ECC71;
+}
+
+.altitude-chart .chart-horizontal-grid-lines {
+    -fx-stroke: #E8ECF4;
+    -fx-stroke-dash-array: 4 4;
+}
+
+.altitude-chart .chart-vertical-grid-lines {
+    -fx-stroke: transparent;
+}
+
+.altitude-chart .axis {
+    -fx-tick-label-font-size: 10px;
+    -fx-tick-label-fill: #7B8499;
+}
+
+.altitude-chart .chart-legend {
+    -fx-background-color: transparent;
+    -fx-font-size: 11px;
+}
+
+/* ── Leyenda de gráfica: Altitud (azul) ── */
+.altitude-chart .default-color0.chart-legend-item-symbol {
+    -fx-background-color: #00AEEF;
+}
+
+/* ── Leyenda de gráfica: Velocidad (verde) ── */
+.altitude-chart .default-color1.chart-legend-item-symbol {
+    -fx-background-color: #2ECC71;
+}
+
+/* ── Tooltip del mapa / gráfica ── */
+.map-tooltip {
+    -fx-background-color: rgba(26, 37, 64, 0.88);
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 12px;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6, 0.2, 0, 2);
+}
+
+/* ── Menú contextual del mapa (clic derecho) ── */
+.context-menu-map {
+    -fx-background-color: white;
+    -fx-border-color: #D8DCE6;
+    -fx-border-width: 1px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 12, 0.2, 0, 4);
+    -fx-padding: 4px 0;
+}
+
+.context-menu-map .menu-item {
+    -fx-padding: 8px 16px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #3A4255;
+    -fx-background-color: transparent;
+}
+
+.context-menu-map .menu-item:hover {
+    -fx-background-color: #EAF7FD;
+    -fx-text-fill: #00AEEF;
+}
+
+/* ── TabPane para navegación de vistas ── */
+.tab-pane-nav .tab {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #E0E5EF transparent;
+    -fx-border-width: 0 0 2px 0;
+    -fx-padding: 8px 16px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+}
+
+.tab-pane-nav .tab:selected {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #00AEEF transparent;
+}
+
+.tab-pane-nav .tab-label {
+    -fx-text-fill: #7B8499;
+}
+
+.tab-pane-nav .tab:selected .tab-label {
+    -fx-text-fill: #00AEEF;
+    -fx-font-weight: bold;
+}
+
+.tab-pane-nav .tab-header-background {
+    -fx-background-color: white;
+}
+
+/* ── Spinner / indicador de carga ── */
+.progress-indicator-loading {
+    -fx-progress-color: #00AEEF;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+}

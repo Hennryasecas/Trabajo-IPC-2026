@@ -1,0 +1,158 @@
+/* ============================================================
+   inputs.css — Running la Safor · JavaFX TextField / Input Styles
+   ============================================================ */
+
+/* ── Campo de texto base (Nickname, Email, Contraseña) ── */
+.text-field-base {
+    -fx-background-color: white;
+    -fx-border-color: #D8DCE6;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 14px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1A2540;
+    -fx-prompt-text-fill: #ADBAC7;
+    -fx-min-height: 40px;
+}
+
+.text-field-base:focused {
+    -fx-border-color: #00AEEF;
+    -fx-effect: dropshadow(gaussian, rgba(0,174,239,0.25), 6, 0.3, 0, 0);
+    -fx-background-color: #F7FCFF;
+}
+
+.text-field-base:hover {
+    -fx-border-color: #A8C8D8;
+}
+
+/* ── Campo deshabilitado (Nickname no editable) ── */
+.text-field-disabled,
+.text-field-base:disabled {
+    -fx-background-color: #F4F6FA;
+    -fx-border-color: #E0E4EC;
+    -fx-text-fill: #A0A8B5;
+    -fx-opacity: 1;
+    -fx-cursor: default;
+}
+
+/* ── Campo con error de validación ── */
+.text-field-error {
+    -fx-background-color: #FFF8F8;
+    -fx-border-color: #E74C3C;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 14px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1A2540;
+    -fx-prompt-text-fill: #ADBAC7;
+}
+
+/* ── Campo con validación correcta ── */
+.text-field-valid {
+    -fx-border-color: #2ECC71;
+    -fx-background-color: #F8FFF9;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 14px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1A2540;
+}
+
+/* ── Campo numérico Bounding Box (coordenadas) ── */
+.text-field-coordinate {
+    -fx-background-color: white;
+    -fx-border-color: #C5CBD8;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 36px 8px 10px;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1A2540;
+    -fx-prompt-text-fill: #B0B8C5;
+}
+
+.text-field-coordinate:focused {
+    -fx-border-color: #00AEEF;
+    -fx-effect: dropshadow(gaussian, rgba(0,174,239,0.20), 5, 0.2, 0, 0);
+}
+
+/* ── DatePicker (Fecha de Nacimiento) ── */
+.date-picker-field .text-field {
+    -fx-background-color: white;
+    -fx-border-color: #D8DCE6;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px 0 0 8px;
+    -fx-background-radius: 8px 0 0 8px;
+    -fx-padding: 10px 14px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1A2540;
+    -fx-prompt-text-fill: #ADBAC7;
+}
+
+.date-picker-field .arrow-button {
+    -fx-background-color: #F0F2F5;
+    -fx-border-color: #D8DCE6;
+    -fx-border-width: 1.5px 1.5px 1.5px 0;
+    -fx-border-radius: 0 8px 8px 0;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+.date-picker-field .arrow-button:hover {
+    -fx-background-color: #E2E7EF;
+}
+
+/* ── PasswordField (Contraseña) — mismo estilo que base ── */
+.password-field-base {
+    -fx-background-color: white;
+    -fx-border-color: #D8DCE6;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 44px 10px 14px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1A2540;
+    -fx-prompt-text-fill: #ADBAC7;
+    -fx-min-height: 40px;
+}
+
+.password-field-base:focused {
+    -fx-border-color: #00AEEF;
+    -fx-effect: dropshadow(gaussian, rgba(0,174,239,0.25), 6, 0.3, 0, 0);
+}
+
+/* ── TextArea para anotaciones ── */
+.text-area-notes {
+    -fx-background-color: white;
+    -fx-border-color: #D8DCE6;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 14px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1A2540;
+    -fx-prompt-text-fill: #ADBAC7;
+    -fx-wrap-text: true;
+}
+
+.text-area-notes:focused {
+    -fx-border-color: #00AEEF;
+    -fx-effect: dropshadow(gaussian, rgba(0,174,239,0.20), 5, 0.2, 0, 0);
+}
+
+.text-area-notes .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.text-area-notes .content {
+    -fx-background-color: transparent;
+}

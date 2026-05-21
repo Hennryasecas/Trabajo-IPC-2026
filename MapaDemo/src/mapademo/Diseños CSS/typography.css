@@ -1,0 +1,149 @@
+/* ============================================================
+   typography.css — Running la Safor · JavaFX Text Styles
+   ============================================================ */
+
+/* ── Título principal de pantalla (Running la Safor) ── */
+.title-app {
+    -fx-font-family: "Segoe UI Bold", "Arial Black", sans-serif;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A2540;
+    -fx-alignment: center;
+}
+
+/* ── Subtítulo / eslogan (Bienvenido de vuelta) ── */
+.subtitle-app {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #7B8499;
+    -fx-alignment: center;
+}
+
+/* ── Encabezado de sección (Actividades Recientes, Estadísticas) ── */
+.label-section-header {
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #00AEEF;
+    -fx-background-radius: 6px 6px 0 0;
+    -fx-padding: 6px 12px;
+}
+
+/* ── Título de actividad en lista ── */
+.label-activity-title {
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A2540;
+}
+
+/* ── Meta-datos de actividad (km, tiempo, desnivel) ── */
+.label-activity-meta {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 11px;
+    -fx-text-fill: #7B8499;
+}
+
+/* ── Valor estadístico grande (12.5 km, 1:24:32) ── */
+.label-stat-value {
+    -fx-font-family: "Segoe UI Bold", "Arial Black", sans-serif;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A2540;
+}
+
+/* ── Etiqueta de estadística (Distancia Total, Tiempo) ── */
+.label-stat-name {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 11px;
+    -fx-text-fill: #7B8499;
+}
+
+/* ── Etiqueta de campo de formulario ── */
+.label-field {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #4A5368;
+    -fx-padding: 0 0 4px 0;
+}
+
+/* ── Texto de ayuda / hint pequeño ── */
+.label-hint {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 11px;
+    -fx-text-fill: #9BA3B0;
+    -fx-font-style: italic;
+}
+
+/* ── Mensaje de error de validación ── */
+.label-error {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 11px;
+    -fx-text-fill: #E74C3C;
+    -fx-font-weight: bold;
+}
+
+/* ── Mensaje de éxito ── */
+.label-success {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 11px;
+    -fx-text-fill: #2ECC71;
+    -fx-font-weight: bold;
+}
+
+/* ── Título de modal / diálogo (Confirmar Cierre de Sesión) ── */
+.label-modal-title {
+    -fx-font-family: "Segoe UI Bold", "Arial Black", sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* ── Cuerpo de texto en modal ── */
+.label-modal-body {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #3A4255;
+    -fx-wrap-text: true;
+}
+
+/* ── Nombre destacado dentro de texto (fer en negrita) ── */
+.label-highlight {
+    -fx-font-family: "Segoe UI Bold", "Arial Black", sans-serif;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00AEEF;
+}
+
+/* ── Etiqueta "No editable" / texto con candado ── */
+.label-locked {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 11px;
+    -fx-text-fill: #B0B6C1;
+    -fx-font-style: italic;
+}
+
+/* ── Título de sección de configuración / ajustes ── */
+.label-settings-section {
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1A2540;
+    -fx-border-color: transparent transparent #E0E5EF transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 0 0 6px 0;
+}
+
+/* ── Texto de la barra de navegación (Importar GPX, Mapas…) ── */
+.label-nav {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 12px;
+    -fx-text-fill: #4A5368;
+    -fx-cursor: hand;
+}
+
+.label-nav:hover {
+    -fx-text-fill: #00AEEF;
+}

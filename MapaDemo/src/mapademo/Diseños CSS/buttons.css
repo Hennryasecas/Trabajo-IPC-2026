@@ -1,0 +1,154 @@
+/* ============================================================
+   buttons.css — Running la Safor · JavaFX Button Styles
+   Paleta: Azul primario #00AEEF | Verde éxito #2ECC71 | Rojo #E74C3C
+   ============================================================ */
+
+/* ── Botón Primario (Entrar / Crear Cuenta / Guardar Mapa) ── */
+.button-primary {
+    -fx-background-color: linear-gradient(to bottom, #1EC6F5, #00AEEF);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px 24px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,174,239,0.40), 8, 0.3, 0, 3);
+    -fx-min-width: 180px;
+}
+
+.button-primary:hover {
+    -fx-background-color: linear-gradient(to bottom, #33CEFF, #009FD6);
+    -fx-effect: dropshadow(gaussian, rgba(0,174,239,0.60), 12, 0.4, 0, 4);
+}
+
+.button-primary:pressed {
+    -fx-background-color: #0090C2;
+    -fx-effect: dropshadow(gaussian, rgba(0,144,194,0.30), 4, 0.2, 0, 1);
+    -fx-translate-y: 1px;
+}
+
+/* ── Botón Peligro / Cerrar Sesión (Rojo) ── */
+.button-danger {
+    -fx-background-color: linear-gradient(to bottom, #F05C5C, #E74C3C);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px 24px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.40), 8, 0.3, 0, 3);
+}
+
+.button-danger:hover {
+    -fx-background-color: linear-gradient(to bottom, #F57171, #D44235);
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.55), 12, 0.4, 0, 4);
+}
+
+.button-danger:pressed {
+    -fx-background-color: #C0392B;
+    -fx-translate-y: 1px;
+}
+
+/* ── Botón Éxito / Guardar (Verde) ── */
+.button-success {
+    -fx-background-color: linear-gradient(to bottom, #45D97A, #2ECC71);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px 24px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.40), 8, 0.3, 0, 3);
+}
+
+.button-success:hover {
+    -fx-background-color: linear-gradient(to bottom, #5AE48A, #27AE60);
+}
+
+.button-success:pressed {
+    -fx-background-color: #219A52;
+    -fx-translate-y: 1px;
+}
+
+/* ── Botón Secundario / Volver (Gris claro) ── */
+.button-secondary {
+    -fx-background-color: #F0F2F5;
+    -fx-text-fill: #5A6475;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #D8DCE6;
+    -fx-border-width: 1px;
+    -fx-padding: 10px 24px;
+    -fx-cursor: hand;
+}
+
+.button-secondary:hover {
+    -fx-background-color: #E4E7EE;
+    -fx-text-fill: #3A4255;
+}
+
+.button-secondary:pressed {
+    -fx-background-color: #D8DCE6;
+    -fx-translate-y: 1px;
+}
+
+/* ── Botón Icono pequeño (zoom +/- en el mapa) ── */
+.button-icon {
+    -fx-background-color: white;
+    -fx-text-fill: #00AEEF;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #D0D6E0;
+    -fx-border-width: 1px;
+    -fx-min-width: 36px;
+    -fx-min-height: 36px;
+    -fx-max-width: 36px;
+    -fx-max-height: 36px;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 4, 0.2, 0, 1);
+}
+
+.button-icon:hover {
+    -fx-background-color: #EAF7FD;
+    -fx-border-color: #00AEEF;
+}
+
+/* ── Botón deshabilitado (Nickname no editable) ── */
+.button-disabled,
+.button-primary:disabled,
+.button-success:disabled,
+.button-danger:disabled {
+    -fx-background-color: #C8CDD6;
+    -fx-text-fill: #8A8F9A;
+    -fx-effect: none;
+    -fx-cursor: default;
+    -fx-opacity: 0.7;
+}
+
+/* ── Link-Button (¿Eres nuevo? / ¿Ya tienes cuenta?) ── */
+.button-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: #00AEEF;
+    -fx-font-size: 13px;
+    -fx-underline: true;
+    -fx-cursor: hand;
+    -fx-padding: 4px 0;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+}
+
+.button-link:hover {
+    -fx-text-fill: #0090C6;
+}

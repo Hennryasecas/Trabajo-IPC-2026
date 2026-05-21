@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<!--
+    ============================================================
+    EJEMPLO de uso de los CSS en un FXML de JavaFX
+    Running la Safor — Login / Dashboard / Modal
+
+    CÓMO REFERENCIAR LOS CSS EN TU FXML:
+    Coloca los 4 ficheros CSS en la misma carpeta que tus FXML
+    (o en /resources/styles/) y referencíalos en el nodo raíz:
+
+        <stylesheets>
+            <URL value="@buttons.css"/>
+            <URL value="@typography.css"/>
+            <URL value="@inputs.css"/>
+            <URL value="@layout.css"/>
+            <URL value="@components.css"/>
+        </stylesheets>
+
+    Puedes incluir todos en la vista raíz (StackPane, BorderPane…)
+    o solo los que necesite cada pantalla.
+    ============================================================
+-->
+
+<!-- ══════════════════════════════════════════
+     1. PANTALLA DE LOGIN
+     ══════════════════════════════════════════ -->
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           styleClass="root-background">
+
+    <stylesheets>
+        <URL value="@buttons.css"/>
+        <URL value="@typography.css"/>
+        <URL value="@inputs.css"/>
+        <URL value="@layout.css"/>
+        <URL value="@components.css"/>
+    </stylesheets>
+
+    <!-- Tarjeta de Login centrada -->
+    <VBox styleClass="card" maxWidth="400" spacing="16" alignment="CENTER">
+        <padding><Insets top="32" right="32" bottom="32" left="32"/></padding>
+
+        <!-- Avatar app -->
+        <StackPane styleClass="avatar-circle" alignment="CENTER"
+                   VBox.vgrow="NEVER">
+            <Label text="🏃" style="-fx-font-size:28px;"/>
+        </StackPane>
+
+        <!-- Título -->
+        <Label text="Running la Safor" styleClass="title-app"/>
+        <Label text="Bienvenido de vuelta" styleClass="subtitle-app"/>
+
+        <!-- Campo Nickname -->
+        <VBox spacing="4">
+            <Label text="Nickname" styleClass="label-field"/>
+            <TextField promptText="Tu nickname"
+                       styleClass="text-field-base"
+                       maxWidth="Infinity"/>
+        </VBox>
+
+        <!-- Campo Contraseña -->
+        <VBox spacing="4">
+            <Label text="Contraseña" styleClass="label-field"/>
+            <PasswordField promptText="••••••••"
+                           styleClass="password-field-base"
+                           maxWidth="Infinity"/>
+        </VBox>
+
+        <!-- Botón principal -->
+        <Button text="Entrar"
+                styleClass="button-primary"
+                maxWidth="Infinity"/>
+
+        <!-- Link registro -->
+        <Button text="¿Eres nuevo? Crea una cuenta aquí"
+                styleClass="button-link"/>
+    </VBox>
+</StackPane>
+
+
+<!-- ══════════════════════════════════════════
+     2. DASHBOARD PRINCIPAL (estructura)
+     ══════════════════════════════════════════ -->
+<!--
+<BorderPane styleClass="root-background">
+    <stylesheets>
+        <URL value="@buttons.css"/>
+        <URL value="@typography.css"/>
+        <URL value="@inputs.css"/>
+        <URL value="@layout.css"/>
+        <URL value="@components.css"/>
+    </stylesheets>
+
+    < ── Barra superior ── >
+    <top>
+        <HBox styleClass="topbar" alignment="CENTER_LEFT" spacing="16">
+            <Label text="Running la Safor" styleClass="topbar-brand"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="📥 Importar GPX" styleClass="button-secondary"/>
+            <Button text="🗺 Mapas"       styleClass="button-secondary"/>
+            <Button text="🕘 Historial"   styleClass="button-secondary"/>
+            <Button text="→"             styleClass="button-icon"/>
+        </HBox>
+    </top>
+
+    < ── Panel izquierdo: lista actividades ── >
+    <left>
+        <VBox styleClass="sidebar-panel" spacing="0">
+            <HBox styleClass="panel-header">
+                <Label text="Actividades Recientes" styleClass="label-section-header"/>
+            </HBox>
+            <ListView styleClass="list-view-activities" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </left>
+
+    < ── Centro: mapa + gráfica ── >
+    <center>
+        <VBox spacing="0">
+            < mapa >
+            <StackPane styleClass="map-area" VBox.vgrow="ALWAYS">
+                < botones zoom >
+                <VBox alignment="TOP_RIGHT" spacing="4">
+                    <padding><Insets top="10" right="10"/></padding>
+                    <Button text="+" styleClass="button-icon"/>
+                    <Button text="−" styleClass="button-icon"/>
+                </VBox>
+            </StackPane>
+            < gráfica altitud >
+            <VBox styleClass="chart-panel">
+                <Label text="Perfil de Altitud Interactivo" styleClass="label-stat-name"/>
+                < LineChart aquí con styleClass="altitude-chart" >
+            </VBox>
+        </VBox>
+    </center>
+
+    < ── Panel derecho: estadísticas ── >
+    <right>
+        <VBox styleClass="stats-panel" spacing="0">
+            <HBox styleClass="panel-header">
+                <Label text="Estadísticas" styleClass="label-section-header"/>
+            </HBox>
+            <VBox spacing="8" style="-fx-padding: 12px;">
+                < stat card >
+                <VBox styleClass="stat-card" spacing="4">
+                    <HBox styleClass="stat-icon-blue">
+                        <Label text="📏" style="-fx-font-size:14px;"/>
+                    </HBox>
+                    <Label text="12.5 km" styleClass="label-stat-value"/>
+                    <Label text="Distancia Total" styleClass="label-stat-name"/>
+                </VBox>
+            </VBox>
+        </VBox>
+    </right>
+</BorderPane>
+-->
+
+
+<!-- ══════════════════════════════════════════
+     3. MODAL — Confirmar Cierre de Sesión
+     ══════════════════════════════════════════ -->
+<!--
+<StackPane styleClass="modal-overlay">
+    <VBox styleClass="modal-container" maxWidth="420" alignment="TOP_CENTER">
+        < cabecera roja >
+        <HBox styleClass="modal-header-danger" alignment="CENTER_LEFT" spacing="10">
+            <Label text="⚠" style="-fx-text-fill:white;-fx-font-size:16px;"/>
+            <Label text="Confirmar Cierre de Sesión" styleClass="label-modal-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="✕" styleClass="button-icon"/>
+        </HBox>
+        < cuerpo >
+        <VBox styleClass="modal-body" spacing="8">
+            <Label text="¿Estás seguro de que deseas cerrar sesión?"
+                   styleClass="label-modal-body"/>
+            <Label text="Perderás el acceso a tu dashboard y tendrás que iniciar sesión nuevamente."
+                   styleClass="label-modal-body"/>
+        </VBox>
+        < pie >
+        <HBox styleClass="modal-footer" spacing="10">
+            <Button text="Cancelar"       styleClass="button-secondary"/>
+            <Button text="→ Cerrar Sesión" styleClass="button-danger"/>
+        </HBox>
+    </VBox>
+</StackPane>
+-->
+
+
+<!-- ══════════════════════════════════════════
+     4. MODAL — Gestión de Mapas (Bounding Box)
+     ══════════════════════════════════════════ -->
+<!--
+<StackPane styleClass="modal-overlay">
+    <VBox styleClass="modal-container" maxWidth="460">
+        <HBox styleClass="modal-header-primary" alignment="CENTER_LEFT" spacing="10">
+            <Label text="📍" style="-fx-text-fill:white;-fx-font-size:16px;"/>
+            <VBox>
+                <Label text="Gestión de Mapas"     styleClass="label-modal-title"/>
+                <Label text="Añade un nuevo mapa personalizado"
+                       style="-fx-text-fill:rgba(255,255,255,0.8);-fx-font-size:11px;"/>
+            </VBox>
+        </HBox>
+        <VBox styleClass="modal-body" spacing="14">
+            < zona drop JPG >
+            <VBox styleClass="dropzone" spacing="8" alignment="CENTER">
+                <Label text="🖼" style="-fx-font-size:28px;"/>
+                <Label text="Haz clic para cargar una imagen JPG"
+                       styleClass="label-activity-title"/>
+                <Label text="Recomendado: Alta resolución para mejor visualización"
+                       styleClass="label-hint"/>
+            </VBox>
+            < bounding box >
+            <Label text="📍 Bounding Box (Coordenadas Geográficas)"
+                   styleClass="label-settings-section"/>
+            <GridPane hgap="12" vgap="8">
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" spacing="4">
+                    <Label text="Latitud Mínima (Sur)" styleClass="label-field"/>
+                    <TextField promptText="Ej: 38.9500" styleClass="text-field-coordinate"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="0" spacing="4">
+                    <Label text="Latitud Máxima (Norte)" styleClass="label-field"/>
+                    <TextField promptText="Ej: 39.0500" styleClass="text-field-coordinate"/>
+                </VBox>
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="1" spacing="4">
+                    <Label text="Longitud Mínima (Oeste)" styleClass="label-field"/>
+                    <TextField promptText="Ej: -0.2000" styleClass="text-field-coordinate"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="1" spacing="4">
+                    <Label text="Longitud Máxima (Este)" styleClass="label-field"/>
+                    <TextField promptText="Ej: -0.1000" styleClass="text-field-coordinate"/>
+                </VBox>
+            </GridPane>
+            < banner info >
+            <VBox styleClass="info-banner">
+                <Label styleClass="info-banner-text"
+                       text="Ayuda: Las coordenadas definen el área geográfica. Puedes obtenerlas desde Google Maps o servicios GIS."
+                       wrapText="true"/>
+            </VBox>
+        </VBox>
+        <HBox styleClass="modal-footer" spacing="10">
+            <Button text="Volver"        styleClass="button-secondary"/>
+            <Button text="💾 Guardar Mapa" styleClass="button-success"/>
+        </HBox>
+    </VBox>
+</StackPane>
+-->
+
+</StackPane>

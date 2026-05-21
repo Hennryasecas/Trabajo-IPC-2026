@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="mapademo.AdjuntosFXML.VistaRegistroController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="192.0" layoutY="8.0" prefHeight="634.0" prefWidth="416.0" spacing="10.0" style="-fx-border-color: #e4fdfd; -fx-background-color: #e8e8e8;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <ImageView fx:id="imagen" fitHeight="107.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/istockphoto-1205673049-612x612.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="subirImagen" maxHeight="51.0" maxWidth="162.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="127.0" styleClass="button-secondary" stylesheets="@../Diseños%20CSS/buttons.css" text="Subir Imagen" />
+            <Label styleClass="label-hint" text="(Opcional)">
+               <stylesheets>
+                  <URL value="@../Diseños%20CSS/typography.css" />
+                  <URL value="@../Diseños%20CSS/inputs.css" />
+               </stylesheets>
+            </Label>
+            <Label styleClass="title-app" stylesheets="@../Diseños%20CSS/typography.css" text="Registrate" />
+            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="282.0" prefWidth="342.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="341.0" minWidth="10.0" prefWidth="312.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="60.0" minHeight="50.0" prefHeight="35.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="50.0" prefHeight="33.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="50.0" prefHeight="37.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="50.0" prefHeight="48.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="50.0" prefHeight="33.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="50.0" prefHeight="24.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="nombre" maxWidth="-Infinity" prefHeight="26.0" prefWidth="110.0" promptText="Nombre" styleClass="text-field-base" stylesheets="@../Diseños%20CSS/inputs.css" GridPane.columnIndex="1" />
+                  <TextField fx:id="apellidos" maxWidth="-Infinity" prefHeight="40.0" prefWidth="260.0" promptText="Apellidos" styleClass="text-field-base" stylesheets="@../Diseños%20CSS/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="nickname" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="110.0" promptText="Nickname" styleClass="text-field-base" stylesheets="@../Diseños%20CSS/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="correo" maxWidth="-Infinity" prefHeight="42.0" prefWidth="260.0" promptText="Correo Electronico" styleClass="text-field-base" stylesheets="@../Diseños%20CSS/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <PasswordField fx:id="contraseña" maxWidth="-Infinity" prefHeight="42.0" prefWidth="187.0" promptText="Contraseña" styleClass="text-field-base" stylesheets="@../Diseños%20CSS/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <ImageView fitHeight="22.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+                  <ImageView fitHeight="24.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+                  <ImageView fitHeight="25.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+                  <DatePicker fx:id="fechaNacimiento" promptText="dd/mm/aaaa" styleClass="date-picker-field" stylesheets="@../Diseños%20CSS/inputs.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ImageView fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
+                  <ImageView fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <Label styleClass="label-field" text="Fecha de nacimiento (Debe ser mayor de 12 años)">
+               <stylesheets>
+                  <URL value="@../Diseños%20CSS/inputs.css" />
+                  <URL value="@../Diseños%20CSS/typography.css" />
+               </stylesheets>
+            </Label>
+            <Button fx:id="crearCuenta" mnemonicParsing="false" prefHeight="37.0" prefWidth="269.0" styleClass="button-primary" stylesheets="@../Diseños%20CSS/buttons.css" text="Crear Cuenta" />
+            <HBox alignment="BOTTOM_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="372.0" spacing="10.0">
+               <children>
+                  <Hyperlink maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="237.0" text="¿Tienes cuenta? Inicia sesion aquí." />
+                  <Button fx:id="cancelar" mnemonicParsing="false" prefHeight="29.0" prefWidth="114.0" styleClass="button-secondary" stylesheets="@../Diseños%20CSS/buttons.css" text="Cancelar" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
