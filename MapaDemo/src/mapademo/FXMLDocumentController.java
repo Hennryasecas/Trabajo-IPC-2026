@@ -66,9 +66,7 @@ import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import upv.ipc.sportlib.User;
-import upv.ipc.sportlib.SportActivity;
-import upv.ipc.sportlib.Annotation;
+
 /**
  * Controlador principal de la aplicación de mapa con POIs.
  *
@@ -137,7 +135,6 @@ public class FXMLDocumentController implements Initializable {
     /** ScrollPane que envuelve el mapa y permite desplazarlo. */
     @FXML
     private ScrollPane map_scrollpane;
-    upv.ipc.sportlib.User usuario;
     /**
      * Slider de zoom.
      * Rango: [0.5 – 1.5]. Valor inicial: 1.0 (sin zoom).

@@ -1,11 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mapademo.AdjuntosFXML.MainViewController">
-    
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mapademo.AdjuntosFXML.MainViewController">
+   <top>
+      <HBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="74.0" prefWidth="800.0" style="-fx-background-color: #effdfc;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" prefHeight="102.0" prefWidth="237.0">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/icons8-running-96.png" />
+                     </image></ImageView>
+                  <Label styleClass="title-app" stylesheets="@../Diseños%20CSS/typography.css" text="Running la Safor" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="610.0" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Importar GPX">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/icons8-importar-64.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Mapas">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/icons8-mapa-32.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Historial">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/icons8-reloj-50.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="usuario">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/icons8-usuario-24.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Salir">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/icons8-salida-30.png" />
+                           </image></ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="500.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+          <fx:include source="VistaAcumulados.fxml" />
+         
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <fx:include source="VistaMapaEntrenamiento.fxml" /></VBox>
+   </center>
+</BorderPane>
