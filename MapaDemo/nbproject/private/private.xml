@@ -9,9 +9,13 @@
         <group>
             <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/AdjuntosFXML/VistaLoginController.java</file>
             <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/AdjuntosFXML/VistaRegistroController.java</file>
+            <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/AdjuntosFXML/MainViewController.java</file>
+            <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/MapaDemoApp.java</file>
+            <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/AdjuntosFXML/VistaAcumuladosController.java</file>
+            <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/AdjuntosFXML/VistaMapaEntrenamientoController.java</file>
             <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/FXMLDocumentController.java</file>
-            <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/Diseños%20CSS/components.css</file>
-            <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/AdjuntosFXML/MainView.fxml</file>
+            <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/Arranque.java</file>
+            <file>file:/home/dennis/Documentos/Apuntes%202ºAÑO%20Segundo%20Cuatri/IPC/Practicas/Trabajo%20final/MapaDemo/src/mapademo/AdjuntosFXML/VistaGestionMapasController.java</file>
         </group>
     </open-files>
 </project-private>

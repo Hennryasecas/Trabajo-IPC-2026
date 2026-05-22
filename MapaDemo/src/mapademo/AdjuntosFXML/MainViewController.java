@@ -4,11 +4,19 @@
  */
 package mapademo.AdjuntosFXML;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -27,6 +35,8 @@ public class MainViewController implements Initializable {
     private Button ButtonUsuario;
     @FXML
     private Button ButtonSalir;
+    @FXML
+    private BorderPane mainContainer;
 
     /**
      * Initializes the controller class.
@@ -34,6 +44,32 @@ public class MainViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        cargarVistaInterior("/mapademo/AdjuntosFXML/VistaMapaEntrenamiento.fxml");
+        
+        // Configurar los manejadores de eventos
+        ButtonMapa.setOnAction(e -> cargarVistaInterior("/mapademo/AdjuntosFXML/VistaMapaEntrenamiento.fxml"));
+        ButtonHistorial.setOnAction(e -> cargarVistaInterior("/mapademo/AdjuntosFXML/VistaAcumulados.fxml"));
+        
+        ButtonSalir.setOnAction(this::handleSalir);
     }    
-    
+    private void cargarVistaInterior(String fxmlPath) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Node nodoInterior = loader.load();
+            mainContainer.setCenter(nodoInterior);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error al cargar la vista interna: " + fxmlPath);
+        }
+    }
+    private void handleSalir(ActionEvent event) {
+        try {
+            Parent loginRoot = FXMLLoader.load(getClass().getResource("/mapademo/AdjuntosFXML/VistaLogin.fxml"));
+            Stage stage = (Stage) ButtonSalir.getScene().getWindow();
+            stage.setScene(new Scene(loginRoot));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
