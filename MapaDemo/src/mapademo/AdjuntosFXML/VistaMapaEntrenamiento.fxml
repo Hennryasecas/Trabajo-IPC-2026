@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Group?>
 <?import javafx.scene.chart.AreaChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
@@ -12,26 +13,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #F0F4FA;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mapademo.AdjuntosFXML.VistaMapaEntrenamientoController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
             <AnchorPane layoutX="259.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ScrollPane layoutX="156.0" layoutY="10.0" prefHeight="249.0" prefWidth="521.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="10.0">
+                  <ScrollPane fx:id="ScrollPane" layoutX="156.0" layoutY="10.0" prefHeight="249.0" prefWidth="521.0" styleClass="map-area" stylesheets="@../Diseños%20CSS/layout.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="10.0">
                      <content>
-                        <ImageView fx:id="mapa" fitHeight="722.0" fitWidth="1051.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../resources/calderona.jpg" />
-                           </image>
-                        </ImageView>
+                        <Group fx:id="Group">
+                           <children>
+                              <ImageView fx:id="mapa" fitHeight="722.0" fitWidth="1051.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/calderona.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Group>
                      </content>
                   </ScrollPane>
                   <VBox alignment="TOP_CENTER" layoutX="417.0" layoutY="-2.0" prefHeight="200.0" prefWidth="50.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                      <children>
-                        <Button mnemonicParsing="false" styleClass="button-icon" stylesheets="@../Diseños%20CSS/buttons.css" text="+" />
-                        <Button mnemonicParsing="false" styleClass="button-icon" stylesheets="@../Diseños%20CSS/buttons.css" text="-" />
-                        <Slider maxHeight="154.0" orientation="VERTICAL" prefHeight="154.0" prefWidth="16.0" style="-fx-background-color: #2196F3; -fx-background-radius: 4px;" />
+                        <Button fx:id="botonSumar" mnemonicParsing="false" styleClass="button-icon" stylesheets="@../Diseños%20CSS/buttons.css" text="+" />
+                        <Button fx:id="botonRestar" mnemonicParsing="false" styleClass="button-icon" stylesheets="@../Diseños%20CSS/buttons.css" text="-" />
+                        <Slider fx:id="Slider" maxHeight="154.0" orientation="VERTICAL" prefHeight="154.0" prefWidth="16.0" style="-fx-background-color: #2196F3; -fx-background-radius: 4px;" />
                      </children>
                   </VBox>
                </children>
@@ -39,7 +44,7 @@
          </children></AnchorPane>
     <AnchorPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="123.0" prefWidth="598.0">
          <children>
-            <AreaChart fx:id="grafica" layoutX="-183.0" layoutY="-128.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AreaChart fx:id="grafica" layoutX="-183.0" layoutY="-128.0" styleClass="stats-panel" stylesheets="@../Diseños%20CSS/layout.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>

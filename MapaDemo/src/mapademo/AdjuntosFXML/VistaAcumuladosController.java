@@ -6,7 +6,9 @@ package mapademo.AdjuntosFXML;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
@@ -14,6 +16,15 @@ import javafx.fxml.Initializable;
  * @author dennis
  */
 public class VistaAcumuladosController implements Initializable {
+
+    @FXML
+    private Label LabelDistancia;
+    @FXML
+    private Label LabelTiempo;
+    @FXML
+    private Label LabelDesnivelPositivo;
+    @FXML
+    private Label LabelDenivelNegativo;
 
     /**
      * Initializes the controller class.

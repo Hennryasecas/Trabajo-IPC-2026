@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mapademo.AdjuntosFXML.MainViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="1000.0" style="-fx-background-color: #F0F4FA;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mapademo.AdjuntosFXML.MainViewController">
    <top>
       <HBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="74.0" prefWidth="800.0" style="-fx-background-color: #effdfc;" BorderPane.alignment="CENTER">
          <children>
@@ -23,9 +23,9 @@
                   <Label styleClass="title-app" stylesheets="@../Diseños%20CSS/typography.css" text="Running la Safor" />
                </children>
             </VBox>
-            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="610.0" spacing="15.0">
+            <HBox alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="102.0" prefWidth="766.0" spacing="15.0">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Importar GPX">
+                  <Button fx:id="ButtonImportar" mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Importar GPX">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -36,7 +36,7 @@
                            </image></ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Mapas">
+                  <Button fx:id="ButtonMapa" mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Mapas">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -47,7 +47,7 @@
                            </image></ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Historial">
+                  <Button fx:id="ButtonHistorial" mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Historial">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -58,7 +58,7 @@
                            </image></ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="usuario">
+                  <Button fx:id="ButtonUsuario" mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="usuario">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -69,7 +69,7 @@
                            </image></ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Salir">
+                  <Button fx:id="ButtonSalir" mnemonicParsing="false" style="-fx-background-color: #E0E4EC; -fx-text-fill: #000000; -fx-background-radius: 8px; -fx-border-radius: 8px; -fx-cursor: hand;" stylesheets="@../Diseños%20CSS/buttons.css" text="Salir">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -89,13 +89,13 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="500.0" prefWidth="210.0" BorderPane.alignment="CENTER">
-          <fx:include source="VistaAcumulados.fxml" />
+      <VBox prefHeight="598.0" prefWidth="210.0" BorderPane.alignment="CENTER">
+          <fx:include source="VistaAcumulados.fxml" VBox.vgrow="ALWAYS" />
          
       </VBox>
    </left>
    <center>
       <VBox alignment="CENTER" prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <fx:include source="VistaMapaEntrenamiento.fxml" /></VBox>
+         <fx:include prefHeight="500.0" prefWidth="750.0" source="VistaMapaEntrenamiento.fxml" VBox.vgrow="ALWAYS" /></VBox>
    </center>
 </BorderPane>
