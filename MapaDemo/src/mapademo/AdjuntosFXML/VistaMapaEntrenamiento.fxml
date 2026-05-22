@@ -5,6 +5,7 @@
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.SplitPane?>
@@ -13,26 +14,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #F0F4FA;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mapademo.AdjuntosFXML.VistaMapaEntrenamientoController">
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #F0F4FA;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mapademo.AdjuntosFXML.VistaMapaEntrenamientoController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
             <AnchorPane layoutX="259.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <ScrollPane fx:id="ScrollPane" layoutX="156.0" layoutY="10.0" prefHeight="249.0" prefWidth="521.0" styleClass="map-area" stylesheets="@../Diseños%20CSS/layout.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="67.0" AnchorPane.topAnchor="10.0">
+                  <ScrollPane fx:id="ScrollPane" layoutX="156.0" layoutY="10.0" prefHeight="349.0" prefWidth="698.0" styleClass="map-area" stylesheets="@../Diseños%20CSS/layout.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="10.0">
                      <content>
                         <Group fx:id="Group">
                            <children>
-                              <ImageView fx:id="mapa" fitHeight="722.0" fitWidth="1051.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="mapa" fitHeight="486.0" fitWidth="685.0" layoutX="-137.0" layoutY="-100.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../resources/calderona.jpg" />
                                  </image>
                               </ImageView>
+                              <Label fx:id="mousePositionLabel" layoutX="300.0" layoutY="217.0" prefHeight="18.0" prefWidth="106.0" />
                            </children>
                         </Group>
                      </content>
                   </ScrollPane>
-                  <VBox alignment="TOP_CENTER" layoutX="417.0" layoutY="-2.0" prefHeight="200.0" prefWidth="50.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <VBox alignment="TOP_CENTER" layoutX="417.0" layoutY="-2.0" prefHeight="349.0" prefWidth="75.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                      <children>
                         <Button fx:id="botonSumar" mnemonicParsing="false" styleClass="button-icon" stylesheets="@../Diseños%20CSS/buttons.css" text="+" />
                         <Button fx:id="botonRestar" mnemonicParsing="false" styleClass="button-icon" stylesheets="@../Diseños%20CSS/buttons.css" text="-" />
