@@ -21,10 +21,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-// Importaciones oficiales de la librería proporcionada para el proyecto
-
-import upv.ipc.sportlib.Activity;
-import upv.ipc.sportlib.SportActivityApp;
+// Importaciones de la librería del proyecto
+import ipc2026.library.SportActivityApp;
+import ipc2026.library.Activity;
 
 public class VistaHistorialController implements Initializable {
 
@@ -113,6 +112,19 @@ public class VistaHistorialController implements Initializable {
                 } else {
                     setText(item.toUpperCase());
                     getStyleClass().add("badge-completed"); 
+                }
+            }
+        });
+
+        // --- NUEVO: DETECTOR DE DOBLE CLIC PARA COORDINACIÓN CON COMPAÑEROS ---
+        tableHistorial.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {
+                Activity seleccionada = tableHistorial.getSelectionModel().getSelectedItem();
+                if (seleccionada != null) {
+                    System.out.println("Doble clic en: " + seleccionada.getName());
+                    
+                    // Aquí se conecta con el método de Dennis para cambiar de pantalla
+                    // cargarVistaCentro("/fxml/VistaMapaEntrenamiento.fxml");
                 }
             }
         });
