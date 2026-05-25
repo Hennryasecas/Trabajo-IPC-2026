@@ -1,78 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0" styleClass="root-background" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
-   <padding>
-      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
-   </padding>
-   <children>
-      <VBox prefHeight="200.0" prefWidth="100.0">
-         <children>
-            <Label styleClass="title-app" text="Mi Perfil" />
-            <Label styleClass="subtitle-app" text="Actualiza tu información personal" />
-         </children>
-      </VBox>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" VBox.vgrow="ALWAYS">
-         <children>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" />
-            <Label styleClass="label-settings-section" text="Avatar de Usuario" />
-            <ImageView fx:id="avatarImageView" fitHeight="140.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" styleClass="avatar-circle" />
-            <Button mnemonicParsing="false" onAction="#handleCambiarAvatar" styleClass="button-secondary" text="CambiarAvatar" />
-            <GridPane hgap="15.0" vgap="15.0" HBox.hgrow="ALWAYS">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label styleClass="label-field" text="Nickname">
-                     <graphic>
-                        <TextField fx:id="txtNickName" editable="false" styleClass="text-field-disabled" />
-                     </graphic>
-                  </Label>
-                  <Label styleClass="label-field" text="Correo Electrónico" GridPane.rowIndex="1">
-                     <graphic>
-                        <TextField fx:id="txtEmail" styleClass="text-field-disabled" />
-                     </graphic>
-                  </Label>
-                  <Label styleClass="label-field" text="Fecha de Nacimiento" GridPane.rowIndex="2">
-                     <graphic>
-                        <DatePicker fx:id="dpFechaNacimiento" maxWidth="1.7976931348623157E308" />
-                     </graphic>
-                  </Label>
-                  <Label styleClass="label-field" text="Nueva Contraseña" GridPane.rowIndex="3">
-                     <graphic>
-                        <PasswordField fx:id="txtPassword" styleClass="password-field-base" />
-                     </graphic>
-                  </Label>
-               </children>
-            </GridPane>
-         </children>
-      </HBox>
-   </children>
-   <stylesheets>
-      <URL value="@../Diseños%20CSS/buttons.css" />
-      <URL value="@../Diseños%20CSS/components.css" />
-      <URL value="@../Diseños%20CSS/inputs.css" />
-      <URL value="@../Diseños%20CSS/layout.css" />
-      <URL value="@../Diseños%20CSS/typography.css" />
-   </stylesheets>
-</VBox>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mapademo.AdjuntosFXML.VistaPerfilController">
+    
+</AnchorPane>
