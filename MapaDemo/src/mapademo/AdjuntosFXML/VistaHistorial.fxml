@@ -1,11 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mapademo.AdjuntosFXML.VistaHistorialController">
-    
-</AnchorPane>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root-background" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mapademo.AdjuntosFXML.VistaHistorialController">
+   <stylesheets>
+      <URL value="@../Diseños%20CSS/buttons.css" />
+      <URL value="@../Diseños%20CSS/components.css" />
+      <URL value="@../Diseños%20CSS/inputs.css" />
+      <URL value="@../Diseños%20CSS/layout.css" />
+      <URL value="@../Diseños%20CSS/typography.css" />
+   </stylesheets>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnNuevaActividad" mnemonicParsing="false" onAction="#handleNuevaActividad" styleClass="button-primary" text="+ Registrar Actividad" />
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="title-app" text="Historial de Entrenamientos" />
+                  <Label styleClass="subtitle-app" text="Consulta, audita y analiza de manera detallada las sesiones de ruta completadas." />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TableView fx:id="tableHistorial" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="colFecha" prefWidth="75.0" text="Fecha" />
+          <TableColumn fx:id="colTipo" prefWidth="75.0" text="Tipo de Actividad" />
+            <TableColumn fx:id="colDistancia" prefWidth="75.0" text="Distancia (km)" />
+            <TableColumn fx:id="colTiempo" prefWidth="75.0" text="Tiempo" />
+            <TableColumn fx:id="colRitmo" prefWidth="75.0" text="Ritmo Medio" />
+            <TableColumn fx:id="colCalorias" prefWidth="75.0" text="Calorías (kcal)" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+         <children>
+            <Label fx:id="lblContadorSesiones" styleClass="label-field" text="Total: 0 sesiones de entrenamiento" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnVerDetalles" mnemonicParsing="false" onAction="#handleVerDetalles" styleClass="button-primary" text="Ver Detalles" />
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#handleEliminarSesion" styleClass="button-secondary" text="Eliminar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
