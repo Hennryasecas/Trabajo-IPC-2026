@@ -10,6 +10,8 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+
+// Importaciones unificadas del proyecto de Dennis y la librería
 import upv.ipc.sportlib.Activity;
 import util2.AppContext;
 
@@ -34,7 +36,7 @@ public class VistaAcumuladosController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       // 1. ESCUCHADOR REACTIVO: Se activa automáticamente cuando cambia la actividad en el AppContext
+        // 1. ESCUCHADOR REACTIVO: Se activa automáticamente cuando cambia la actividad en el AppContext
         AppContext.getInstance().actividadActualProperty().addListener((obs, viejaActividad, nuevaActividad) -> {
             if (nuevaActividad != null) {
                 actualizarDatosAcumulados(nuevaActividad);
@@ -51,21 +53,25 @@ public class VistaAcumuladosController implements Initializable {
             limpiarEtiquetas();
         }
     }    
+
     private void actualizarDatosAcumulados(Activity actividad) {
         try {
-            // Extraer datos usando los métodos del JAR (revisa si devuelven metros/kilómetros o segundos)
+            // Extraer datos usando los métodos del JAR 
             double distanciaMetros = actividad.getTotalDistance(); 
             double distanciaKm = distanciaMetros / 1000.0;
             
-            // El tiempo total suele venir en segundos o mediante una duración
-            long tiempoSegundos = actividad.getDuration().toSeconds(); 
+            // El tiempo total se extrae mediante la duración convertida a segundos
+            long tiempoSegundos = 0;
+            if (actividad.getDuration() != null) {
+                tiempoSegundos = (long) actividad.getDuration().toSeconds();
+            }
             String tiempoFormateado = formatearTiempo(tiempoSegundos);
 
             // Desniveles acumulados (valores numéricos de la ruta)
             double desnivelPositivo = actividad.getElevationGain();
             double desnivelNegativo = actividad.getElevationLoss();
 
-            // Asignar los textos formateados a tus componentes FXML con dos decimales
+            // Asignar los textos formateados a los componentes FXML
             LabelDistancia.setText(String.format("%.2f Km", distanciaKm));
             LabelTiempo.setText(tiempoFormateado);
             LabelDesnivelPositivo.setText(String.format("%.1f m", desnivelPositivo));
@@ -76,8 +82,8 @@ public class VistaAcumuladosController implements Initializable {
             e.printStackTrace();
             limpiarEtiquetas();
         }
-        
     }
+
     private void limpiarEtiquetas() {
         LabelDistancia.setText("0.00 Km");
         LabelTiempo.setText("00:00:00");
@@ -94,5 +100,4 @@ public class VistaAcumuladosController implements Initializable {
         long segundos = totalSegundos % 60;
         return String.format("%02d:%02d:%02d", horas, minutos, segundos);
     }
-   
 }
